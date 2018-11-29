@@ -30,6 +30,14 @@
         {
             this.profTabControl1 = new AetherTheme.AetherTabControl();
             this.homeTabPage = new System.Windows.Forms.TabPage();
+            this.aetherGroupBox4 = new AetherTheme.AetherGroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.aetherTag9 = new AetherTheme.AetherTag();
+            this.aetherTag11 = new AetherTheme.AetherTag();
+            this.aetherTag12 = new AetherTheme.AetherTag();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.classTabPage = new System.Windows.Forms.TabPage();
             this.aetherButton1 = new AetherTheme.AetherButton();
             this.aetherGroupBox2 = new AetherTheme.AetherGroupBox();
@@ -73,18 +81,22 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.trackTabPage = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.aetherButton9 = new AetherTheme.AetherButton();
+            this.aetherButton7 = new AetherTheme.AetherButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.aetherTag17 = new AetherTheme.AetherTag();
             this.aetherTextbox18 = new AetherTheme.AetherTextbox();
             this.aetherButton5 = new AetherTheme.AetherButton();
             this.aetherTextbox17 = new AetherTheme.AetherTextbox();
             this.aetherTag18 = new AetherTheme.AetherTag();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.aetherButton7 = new AetherTheme.AetherButton();
+            this.label4 = new System.Windows.Forms.Label();
             this.aetherButton8 = new AetherTheme.AetherButton();
-            this.aetherButton9 = new AetherTheme.AetherButton();
             this.profTabControl1.SuspendLayout();
+            this.homeTabPage.SuspendLayout();
+            this.aetherGroupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.classTabPage.SuspendLayout();
             this.aetherGroupBox2.SuspendLayout();
             this.aetherGroupBox3.SuspendLayout();
@@ -93,9 +105,9 @@
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.trackTabPage.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // profTabControl1
@@ -122,6 +134,7 @@
             // homeTabPage
             // 
             this.homeTabPage.BackColor = System.Drawing.Color.White;
+            this.homeTabPage.Controls.Add(this.aetherGroupBox4);
             this.homeTabPage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.homeTabPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
             this.homeTabPage.Location = new System.Drawing.Point(194, 4);
@@ -131,6 +144,102 @@
             this.homeTabPage.Size = new System.Drawing.Size(869, 546);
             this.homeTabPage.TabIndex = 0;
             this.homeTabPage.Text = "home";
+            // 
+            // aetherGroupBox4
+            // 
+            this.aetherGroupBox4.Controls.Add(this.label3);
+            this.aetherGroupBox4.Controls.Add(this.label2);
+            this.aetherGroupBox4.Controls.Add(this.label1);
+            this.aetherGroupBox4.Controls.Add(this.aetherTag9);
+            this.aetherGroupBox4.Controls.Add(this.aetherTag11);
+            this.aetherGroupBox4.Controls.Add(this.aetherTag12);
+            this.aetherGroupBox4.Controls.Add(this.pictureBox1);
+            this.aetherGroupBox4.Footer = false;
+            this.aetherGroupBox4.FooterText = null;
+            this.aetherGroupBox4.Location = new System.Drawing.Point(8, 8);
+            this.aetherGroupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherGroupBox4.Name = "aetherGroupBox4";
+            this.aetherGroupBox4.Size = new System.Drawing.Size(791, 263);
+            this.aetherGroupBox4.TabIndex = 6;
+            this.aetherGroupBox4.Text = "Information";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(355, 134);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(355, 91);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "label2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(355, 52);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "label1";
+            // 
+            // aetherTag9
+            // 
+            this.aetherTag9.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
+            this.aetherTag9.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.aetherTag9.Location = new System.Drawing.Point(245, 134);
+            this.aetherTag9.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTag9.Name = "aetherTag9";
+            this.aetherTag9.Size = new System.Drawing.Size(100, 15);
+            this.aetherTag9.TabIndex = 3;
+            this.aetherTag9.Text = "total classes";
+            this.aetherTag9.TextColor = System.Drawing.Color.White;
+            // 
+            // aetherTag11
+            // 
+            this.aetherTag11.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
+            this.aetherTag11.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.aetherTag11.Location = new System.Drawing.Point(245, 91);
+            this.aetherTag11.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTag11.Name = "aetherTag11";
+            this.aetherTag11.Size = new System.Drawing.Size(100, 15);
+            this.aetherTag11.TabIndex = 2;
+            this.aetherTag11.Text = "role";
+            this.aetherTag11.TextColor = System.Drawing.Color.White;
+            // 
+            // aetherTag12
+            // 
+            this.aetherTag12.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
+            this.aetherTag12.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.aetherTag12.Location = new System.Drawing.Point(245, 52);
+            this.aetherTag12.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTag12.Name = "aetherTag12";
+            this.aetherTag12.Size = new System.Drawing.Size(100, 15);
+            this.aetherTag12.TabIndex = 1;
+            this.aetherTag12.Text = "name";
+            this.aetherTag12.TextColor = System.Drawing.Color.White;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ImageLocation = "";
+            this.pictureBox1.InitialImage = global::attendance_tracker.Properties.Resources.images;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 52);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // classTabPage
             // 
@@ -157,6 +266,7 @@
             this.aetherButton1.Size = new System.Drawing.Size(113, 28);
             this.aetherButton1.TabIndex = 8;
             this.aetherButton1.Text = "Delete Class";
+            this.aetherButton1.Click += new AetherTheme.AetherButton.ClickEventHandler(this.aetherButton1_Click);
             // 
             // aetherGroupBox2
             // 
@@ -269,6 +379,7 @@
             this.aetherButton3.Size = new System.Drawing.Size(113, 28);
             this.aetherButton3.TabIndex = 8;
             this.aetherButton3.Text = "Modify Class";
+            this.aetherButton3.Click += new AetherTheme.AetherButton.ClickEventHandler(this.aetherButton3_Click);
             // 
             // aetherGroupBox3
             // 
@@ -458,15 +569,7 @@
             // 
             this.studTabPage.BackColor = System.Drawing.Color.White;
             this.studTabPage.Controls.Add(this.panel5);
-            this.studTabPage.Controls.Add(this.aetherButton4);
-            this.studTabPage.Controls.Add(this.aetherTag16);
             this.studTabPage.Controls.Add(this.aetherTextbox16);
-            this.studTabPage.Controls.Add(this.aetherTag15);
-            this.studTabPage.Controls.Add(this.aetherTextbox15);
-            this.studTabPage.Controls.Add(this.aetherTag14);
-            this.studTabPage.Controls.Add(this.aetherTextbox14);
-            this.studTabPage.Controls.Add(this.aetherTag13);
-            this.studTabPage.Controls.Add(this.aetherTextbox13);
             this.studTabPage.Controls.Add(this.panel2);
             this.studTabPage.Controls.Add(this.panel4);
             this.studTabPage.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -488,9 +591,9 @@
             this.panel5.Controls.Add(this.aetherTag20);
             this.panel5.Controls.Add(this.aetherTextbox19);
             this.panel5.Controls.Add(this.aetherTag19);
-            this.panel5.Location = new System.Drawing.Point(475, 317);
+            this.panel5.Location = new System.Drawing.Point(501, 317);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(390, 225);
+            this.panel5.Size = new System.Drawing.Size(364, 225);
             this.panel5.TabIndex = 13;
             // 
             // aetherButton6
@@ -563,7 +666,7 @@
             // aetherButton4
             // 
             this.aetherButton4.EnabledCalc = true;
-            this.aetherButton4.Location = new System.Drawing.Point(573, 251);
+            this.aetherButton4.Location = new System.Drawing.Point(96, 246);
             this.aetherButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.aetherButton4.Name = "aetherButton4";
             this.aetherButton4.Size = new System.Drawing.Size(117, 26);
@@ -575,7 +678,7 @@
             // 
             this.aetherTag16.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag16.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.aetherTag16.Location = new System.Drawing.Point(509, 42);
+            this.aetherTag16.Location = new System.Drawing.Point(32, 34);
             this.aetherTag16.Margin = new System.Windows.Forms.Padding(4);
             this.aetherTag16.Name = "aetherTag16";
             this.aetherTag16.Size = new System.Drawing.Size(100, 15);
@@ -588,7 +691,7 @@
             this.aetherTextbox16.EnabledCalc = true;
             this.aetherTextbox16.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.aetherTextbox16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.aetherTextbox16.Location = new System.Drawing.Point(633, 33);
+            this.aetherTextbox16.Location = new System.Drawing.Point(655, 33);
             this.aetherTextbox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.aetherTextbox16.MaxLength = 32767;
             this.aetherTextbox16.MultiLine = false;
@@ -603,7 +706,7 @@
             // 
             this.aetherTag15.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag15.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.aetherTag15.Location = new System.Drawing.Point(509, 199);
+            this.aetherTag15.Location = new System.Drawing.Point(32, 191);
             this.aetherTag15.Margin = new System.Windows.Forms.Padding(4);
             this.aetherTag15.Name = "aetherTag15";
             this.aetherTag15.Size = new System.Drawing.Size(100, 15);
@@ -616,7 +719,7 @@
             this.aetherTextbox15.EnabledCalc = true;
             this.aetherTextbox15.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.aetherTextbox15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.aetherTextbox15.Location = new System.Drawing.Point(633, 190);
+            this.aetherTextbox15.Location = new System.Drawing.Point(156, 184);
             this.aetherTextbox15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.aetherTextbox15.MaxLength = 32767;
             this.aetherTextbox15.MultiLine = false;
@@ -631,7 +734,7 @@
             // 
             this.aetherTag14.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag14.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.aetherTag14.Location = new System.Drawing.Point(509, 143);
+            this.aetherTag14.Location = new System.Drawing.Point(32, 135);
             this.aetherTag14.Margin = new System.Windows.Forms.Padding(4);
             this.aetherTag14.Name = "aetherTag14";
             this.aetherTag14.Size = new System.Drawing.Size(100, 15);
@@ -644,7 +747,7 @@
             this.aetherTextbox14.EnabledCalc = true;
             this.aetherTextbox14.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.aetherTextbox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.aetherTextbox14.Location = new System.Drawing.Point(633, 134);
+            this.aetherTextbox14.Location = new System.Drawing.Point(152, 128);
             this.aetherTextbox14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.aetherTextbox14.MaxLength = 32767;
             this.aetherTextbox14.MultiLine = false;
@@ -659,7 +762,7 @@
             // 
             this.aetherTag13.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag13.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.aetherTag13.Location = new System.Drawing.Point(509, 91);
+            this.aetherTag13.Location = new System.Drawing.Point(32, 84);
             this.aetherTag13.Margin = new System.Windows.Forms.Padding(4);
             this.aetherTag13.Name = "aetherTag13";
             this.aetherTag13.Size = new System.Drawing.Size(100, 15);
@@ -672,7 +775,7 @@
             this.aetherTextbox13.EnabledCalc = true;
             this.aetherTextbox13.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.aetherTextbox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.aetherTextbox13.Location = new System.Drawing.Point(633, 83);
+            this.aetherTextbox13.Location = new System.Drawing.Point(152, 77);
             this.aetherTextbox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.aetherTextbox13.MaxLength = 32767;
             this.aetherTextbox13.MultiLine = false;
@@ -688,11 +791,10 @@
             this.panel2.BackColor = System.Drawing.Color.Gray;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(4, 4);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(465, 538);
+            this.panel2.Size = new System.Drawing.Size(491, 538);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView1
@@ -700,13 +802,12 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(461, 534);
+            this.dataGridView1.Size = new System.Drawing.Size(484, 534);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -714,9 +815,17 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.DarkGray;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Location = new System.Drawing.Point(473, 4);
+            this.panel4.Controls.Add(this.aetherTag15);
+            this.panel4.Controls.Add(this.aetherButton4);
+            this.panel4.Controls.Add(this.aetherTag14);
+            this.panel4.Controls.Add(this.aetherTag16);
+            this.panel4.Controls.Add(this.aetherTextbox15);
+            this.panel4.Controls.Add(this.aetherTag13);
+            this.panel4.Controls.Add(this.aetherTextbox14);
+            this.panel4.Controls.Add(this.aetherTextbox13);
+            this.panel4.Location = new System.Drawing.Point(501, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(392, 307);
+            this.panel4.Size = new System.Drawing.Size(364, 307);
             this.panel4.TabIndex = 12;
             // 
             // trackTabPage
@@ -725,8 +834,6 @@
             this.trackTabPage.Controls.Add(this.panel6);
             this.trackTabPage.Controls.Add(this.panel3);
             this.trackTabPage.Controls.Add(this.panel1);
-            this.trackTabPage.Controls.Add(this.aetherTag17);
-            this.trackTabPage.Controls.Add(this.aetherTextbox18);
             this.trackTabPage.Controls.Add(this.aetherButton5);
             this.trackTabPage.Controls.Add(this.aetherTextbox17);
             this.trackTabPage.Controls.Add(this.aetherTag18);
@@ -739,16 +846,49 @@
             this.trackTabPage.TabIndex = 4;
             this.trackTabPage.Text = "Track Attendance";
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Silver;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Location = new System.Drawing.Point(499, 361);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(296, 177);
+            this.panel6.TabIndex = 16;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Silver;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.aetherButton8);
+            this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.aetherButton9);
             this.panel3.Controls.Add(this.aetherButton7);
+            this.panel3.Controls.Add(this.aetherTag17);
+            this.panel3.Controls.Add(this.aetherTextbox18);
             this.panel3.Location = new System.Drawing.Point(499, 46);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(296, 261);
+            this.panel3.Size = new System.Drawing.Size(296, 309);
             this.panel3.TabIndex = 15;
+            // 
+            // aetherButton9
+            // 
+            this.aetherButton9.EnabledCalc = true;
+            this.aetherButton9.Location = new System.Drawing.Point(73, 199);
+            this.aetherButton9.Name = "aetherButton9";
+            this.aetherButton9.Size = new System.Drawing.Size(150, 38);
+            this.aetherButton9.TabIndex = 1;
+            this.aetherButton9.Text = "Update Attendance";
+            this.aetherButton9.Click += new AetherTheme.AetherButton.ClickEventHandler(this.aetherButton9_Click);
+            // 
+            // aetherButton7
+            // 
+            this.aetherButton7.EnabledCalc = true;
+            this.aetherButton7.Location = new System.Drawing.Point(73, 146);
+            this.aetherButton7.Name = "aetherButton7";
+            this.aetherButton7.Size = new System.Drawing.Size(150, 38);
+            this.aetherButton7.TabIndex = 0;
+            this.aetherButton7.Text = "Mark Attendance";
+            this.aetherButton7.Click += new AetherTheme.AetherButton.ClickEventHandler(this.aetherButton7_Click);
             // 
             // panel1
             // 
@@ -763,7 +903,7 @@
             // 
             this.aetherTag17.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag17.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.aetherTag17.Location = new System.Drawing.Point(574, 19);
+            this.aetherTag17.Location = new System.Drawing.Point(16, 89);
             this.aetherTag17.Margin = new System.Windows.Forms.Padding(4);
             this.aetherTag17.Name = "aetherTag17";
             this.aetherTag17.Size = new System.Drawing.Size(64, 15);
@@ -777,7 +917,7 @@
             this.aetherTextbox18.EnabledCalc = true;
             this.aetherTextbox18.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.aetherTextbox18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.aetherTextbox18.Location = new System.Drawing.Point(665, 11);
+            this.aetherTextbox18.Location = new System.Drawing.Point(107, 81);
             this.aetherTextbox18.MaxLength = 32767;
             this.aetherTextbox18.MultiLine = false;
             this.aetherTextbox18.Name = "aetherTextbox18";
@@ -826,44 +966,24 @@
             this.aetherTag18.Text = "Class ID";
             this.aetherTag18.TextColor = System.Drawing.Color.White;
             // 
-            // panel6
+            // label4
             // 
-            this.panel6.BackColor = System.Drawing.Color.Silver;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.aetherButton8);
-            this.panel6.Location = new System.Drawing.Point(499, 313);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(296, 225);
-            this.panel6.TabIndex = 16;
-            // 
-            // aetherButton7
-            // 
-            this.aetherButton7.EnabledCalc = true;
-            this.aetherButton7.Location = new System.Drawing.Point(62, 172);
-            this.aetherButton7.Name = "aetherButton7";
-            this.aetherButton7.Size = new System.Drawing.Size(131, 23);
-            this.aetherButton7.TabIndex = 0;
-            this.aetherButton7.Text = "Mark Attendance";
-            this.aetherButton7.Click += new AetherTheme.AetherButton.ClickEventHandler(this.aetherButton7_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(76, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 46);
+            this.label4.TabIndex = 2;
             // 
             // aetherButton8
             // 
             this.aetherButton8.EnabledCalc = true;
-            this.aetherButton8.Location = new System.Drawing.Point(62, 182);
+            this.aetherButton8.Location = new System.Drawing.Point(73, 253);
             this.aetherButton8.Name = "aetherButton8";
-            this.aetherButton8.Size = new System.Drawing.Size(75, 23);
-            this.aetherButton8.TabIndex = 1;
-            this.aetherButton8.Text = "aetherButton8";
-            // 
-            // aetherButton9
-            // 
-            this.aetherButton9.EnabledCalc = true;
-            this.aetherButton9.Location = new System.Drawing.Point(62, 216);
-            this.aetherButton9.Name = "aetherButton9";
-            this.aetherButton9.Size = new System.Drawing.Size(131, 23);
-            this.aetherButton9.TabIndex = 1;
-            this.aetherButton9.Text = "Update Attendance";
-            this.aetherButton9.Click += new AetherTheme.AetherButton.ClickEventHandler(this.aetherButton9_Click);
+            this.aetherButton8.Size = new System.Drawing.Size(150, 38);
+            this.aetherButton8.TabIndex = 3;
+            this.aetherButton8.Text = "Remove Attendance";
+            this.aetherButton8.Click += new AetherTheme.AetherButton.ClickEventHandler(this.aetherButton8_Click);
             // 
             // ProfForm
             // 
@@ -880,6 +1000,10 @@
             this.Text = "ProfForm";
             this.Load += new System.EventHandler(this.ProfForm_Load);
             this.profTabControl1.ResumeLayout(false);
+            this.homeTabPage.ResumeLayout(false);
+            this.aetherGroupBox4.ResumeLayout(false);
+            this.aetherGroupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.classTabPage.ResumeLayout(false);
             this.aetherGroupBox2.ResumeLayout(false);
             this.aetherGroupBox3.ResumeLayout(false);
@@ -888,9 +1012,10 @@
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.trackTabPage.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -951,8 +1076,17 @@
         private AetherTheme.AetherTextbox aetherTextbox19;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel6;
-        private AetherTheme.AetherButton aetherButton8;
         private AetherTheme.AetherButton aetherButton7;
         private AetherTheme.AetherButton aetherButton9;
+        private AetherTheme.AetherGroupBox aetherGroupBox4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private AetherTheme.AetherTag aetherTag9;
+        private AetherTheme.AetherTag aetherTag11;
+        private AetherTheme.AetherTag aetherTag12;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label4;
+        private AetherTheme.AetherButton aetherButton8;
     }
 }

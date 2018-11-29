@@ -18,7 +18,9 @@ namespace attendance_tracker
         private readonly List<string> _studentLast = new List<string>();
         private readonly List<string> _classStudents = new List<string>();
         private readonly List<string> _classIDs = new List<string>();
+        private readonly List<string> _existClass = new List<string>(); //used to check existing classes
         CheckBox[] chk;
+        private string pFN, pLN, totClass;
 
         static string GetConnectionStrings()
         {
@@ -57,6 +59,7 @@ namespace attendance_tracker
                 panel1.Controls.Add(chk[i]);
                 height += 32;
             }
+            label4.Text = classID;
         }
 
         private void aetherButton4_Click(object sender, EventArgs e)
@@ -66,7 +69,7 @@ namespace attendance_tracker
             _sId = aetherTextbox13.Text;
             _fN = aetherTextbox14.Text;
             _lN = aetherTextbox15.Text;
-
+            getExistingClass(_pId);
             if (string.IsNullOrEmpty(_cId))
                 MessageBox.Show(@"Please enter a class ID!");
             else if (string.IsNullOrEmpty(_sId))
@@ -77,36 +80,42 @@ namespace attendance_tracker
                 MessageBox.Show(@"Please enter student last name");
             else
             {
-                MySqlConnection con = new MySqlConnection(_connection);
-                con.Open();
+                if (_existClass.Exists(x => x == _cId))
+                {
+                    MySqlConnection con = new MySqlConnection(_connection);
+                    con.Open();
 
-                //string query = "INSERT INTO attendance.classattendance(class_id, prof_id, student_id, firstName, lastName)" +
-                //                     "VALUES (@Cid, @Pid, @Sid, @fN, @lN)";
+                    //string query = "INSERT INTO attendance.classattendance(class_id, prof_id, student_id, firstName, lastName)" +
+                    //                     "VALUES (@Cid, @Pid, @Sid, @fN, @lN)";
 
-                //MySqlCommand comm = new MySqlCommand(query, con);
-                //comm.Parameters.AddWithValue("@Cid", _cId);
-                //comm.Parameters.AddWithValue("@Pid", _pId);
-                //comm.Parameters.AddWithValue("@Sid", _sId);
-                //comm.Parameters.AddWithValue("@fN", _fN);
-                //comm.Parameters.AddWithValue("@lN", _lN);
-                //comm.ExecuteNonQuery();
+                    //MySqlCommand comm = new MySqlCommand(query, con);
+                    //comm.Parameters.AddWithValue("@Cid", _cId);
+                    //comm.Parameters.AddWithValue("@Pid", _pId);
+                    //comm.Parameters.AddWithValue("@Sid", _sId);
+                    //comm.Parameters.AddWithValue("@fN", _fN);
+                    //comm.Parameters.AddWithValue("@lN", _lN);
+                    //comm.ExecuteNonQuery();
 
-                string query = "SELECT class_name FROM class WHERE prof_id = @Pid";
-                MySqlCommand comm = new MySqlCommand(query, con);
-                comm.Parameters.AddWithValue("@Pid", _pId);
-                cName = comm.ExecuteScalar().ToString();
+                    string query = "SELECT class_name FROM class WHERE prof_id = @Pid and class_id = @Cid";
+                    MySqlCommand comm = new MySqlCommand(query, con);
+                    comm.Parameters.AddWithValue("@Pid", _pId);
+                    comm.Parameters.AddWithValue("@Cid", _cId);
+                    cName = comm.ExecuteScalar().ToString();
 
-                query = "INSERT INTO attendance.studentclasses(student_id, prof_id, class_id, class_name)" +
-                                     "VALUES (@Sid, @Pid, @Cid, @cN)";
-                comm = new MySqlCommand(query, con);
-                comm.Parameters.AddWithValue("@Sid", _sId);
-                comm.Parameters.AddWithValue("@Pid", _pId);
-                comm.Parameters.AddWithValue("@Cid", _cId);
-                comm.Parameters.AddWithValue("@cN", cName);
-                comm.ExecuteNonQuery();
+                    query = "INSERT INTO attendance.studentclasses(student_id, prof_id, class_id, class_name)" +
+                                         "VALUES (@Sid, @Pid, @Cid, @cN)";
+                    comm = new MySqlCommand(query, con);
+                    comm.Parameters.AddWithValue("@Sid", _sId);
+                    comm.Parameters.AddWithValue("@Pid", _pId);
+                    comm.Parameters.AddWithValue("@Cid", _cId);
+                    comm.Parameters.AddWithValue("@cN", cName);
+                    comm.ExecuteNonQuery();
 
-                con.Close();
-                MessageBox.Show(@"You have enrolled " + _fN + " " + _lN + " for " + _cId);
+                    con.Close();
+                    MessageBox.Show(@"You have enrolled " + _fN + " " + _lN + " for " + _cId);
+                }
+                else
+                    MessageBox.Show("Class ID does not exist");
             }
         }
 
@@ -171,10 +180,16 @@ namespace attendance_tracker
         public ProfForm(string uId)
         {
             InitializeComponent();
-            _userId = uId;
+            _userId = uId; //user id of professor
             GetPid();
             RefreshGrid();
             aetherTextbox18.Text = DateTime.Now.ToString("yyyy-MM-dd");
+
+            //User Profile Info
+            profInfo(uId);
+            label1.Text = pFN + " " + pLN;
+            label2.Text = "Professor";
+            label3.Text = totClass;
         }
 
         private void aetherButton7_Click(object sender, EventArgs e)
@@ -250,6 +265,25 @@ namespace attendance_tracker
             MessageBox.Show("Attendance Marked");
         }
 
+        private void aetherButton8_Click(object sender, EventArgs e)
+        {
+            string cID = label4.Text;
+            string currDate = aetherTextbox18.Text;
+            //_pID;
+            MySqlConnection con = new MySqlConnection(_connection);
+            con.Open();
+
+            string query = "DELETE FROM attendance.classattendance WHERE class_id = @Cid and prof_id = @Pid and date = @date";
+            MySqlCommand comm = new MySqlCommand(query, con);
+            comm.Parameters.AddWithValue("@Cid", cID);
+            comm.Parameters.AddWithValue("@Pid", _pId);
+            comm.Parameters.AddWithValue("@date", currDate);
+            comm.ExecuteNonQuery();
+
+            con.Close();
+            MessageBox.Show("Attendance removed");
+        }
+
         private void aetherButton9_Click(object sender, EventArgs e)
         {
             string cid = aetherTextbox17.Text;
@@ -313,6 +347,34 @@ namespace attendance_tracker
                 }
             }
             MessageBox.Show("Attendance Updated");
+        }
+
+        private void aetherButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aetherButton1_Click(object sender, EventArgs e)
+        {
+            string cID = aetherTextbox10.Text;
+
+            getExistingClass(_pId);
+
+            if (_existClass.Exists(x => x == cID))
+            {
+                MySqlConnection con = new MySqlConnection(_connection);
+                con.Open();
+
+                string query = "DELETE FROM class WHERE class_id = '" + cID + "' and prof_id = '" + _pId + "'";
+                MySqlCommand comm = new MySqlCommand(query, con);
+                comm.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Class Deleted");
+            }
+            else
+                MessageBox.Show("Class does not exist");
+            
         }
 
         private void aetherButton2_Click(object sender, EventArgs e)
@@ -431,6 +493,45 @@ namespace attendance_tracker
                     while (reader.Read())
                     {
                         _classIDs.Add(reader.GetString(0));
+                    }
+                }
+            }
+        }
+        private void profInfo(string uid)
+        {
+            MySqlConnection con = new MySqlConnection(_connection);
+            con.Open();
+
+            string query = "SELECT first_name FROM attendance.professor WHERE user_id = @Uid";
+            MySqlCommand comm = new MySqlCommand(query, con);
+            comm.Parameters.AddWithValue("@Uid", uid);
+            pFN = comm.ExecuteScalar().ToString();
+
+            query = "SELECT last_name FROM attendance.professor WHERE user_id = @Uid";
+            comm = new MySqlCommand(query, con);
+            comm.Parameters.AddWithValue("@Uid", uid);
+            pLN = comm.ExecuteScalar().ToString();
+
+            query = "SELECT COUNT(*) from attendance.class WHERE prof_id = @Pid";
+            comm = new MySqlCommand(query, con);
+            comm.Parameters.AddWithValue("@Pid", _pId);
+            totClass = comm.ExecuteScalar().ToString();
+
+            con.Close();
+        }
+        private void getExistingClass(string Pid)
+        {
+            MySqlConnection con = new MySqlConnection(_connection);
+            con.Open();
+
+            string query = "SELECT class_id FROM attendance.class WHERE prof_id = '" + _pId + "'";
+            using (MySqlCommand command = new MySqlCommand(query, con))
+            {
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        _existClass.Add(reader.GetString(0));
                     }
                 }
             }
