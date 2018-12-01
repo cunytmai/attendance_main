@@ -85,69 +85,69 @@ namespace attendance_tracker
             MessageBox.Show(decryptPassword);
             MessageBox.Show(key);
 
-            //if (string.IsNullOrEmpty(_fName))
-            //    MessageBox.Show(@"Please enter a first name.");
-            //else if (string.IsNullOrEmpty(_lName))
-            //    MessageBox.Show(@"Please enter a last name.");
-            //else if (string.IsNullOrEmpty(_eMail))
-            //    MessageBox.Show(@"Please enter an email address.");
-            //else if (string.IsNullOrEmpty(_username))
-            //    MessageBox.Show(@"Please enter a username.");
-            //else if (string.IsNullOrEmpty(_password))
-            //    MessageBox.Show(@"Please enter a password.");
-            //else if (!aetherRadioButton1.Checked && !aetherRadioButton2.Checked)
-            //    MessageBox.Show(@"Please check a valid role.");
-            //else if (!IsValidEmail(_eMail))
-            //    MessageBox.Show(@"Please enter a valid email.");
-            //else
-            //{
-            //    MessageBox.Show(@"Thank you for creating an account. As the next step, please verify your account." + @"\n"
-            //        + @"A verification code was sent to your email, please enter it below.");
+            if (string.IsNullOrEmpty(_fName))
+                MessageBox.Show(@"Please enter a first name.");
+            else if (string.IsNullOrEmpty(_lName))
+                MessageBox.Show(@"Please enter a last name.");
+            else if (string.IsNullOrEmpty(_eMail))
+                MessageBox.Show(@"Please enter an email address.");
+            else if (string.IsNullOrEmpty(_username))
+                MessageBox.Show(@"Please enter a username.");
+            else if (string.IsNullOrEmpty(_password))
+                MessageBox.Show(@"Please enter a password.");
+            else if (!aetherRadioButton1.Checked && !aetherRadioButton2.Checked)
+                MessageBox.Show(@"Please check a valid role.");
+            else if (!IsValidEmail(_eMail))
+                MessageBox.Show(@"Please enter a valid email.");
+            else
+            {
+                MessageBox.Show(@"Thank you for creating an account. As the next step, please verify your account." + @"\n"
+                    + @"A verification code was sent to your email, please enter it below.");
 
-            //    var con = new MySqlConnection(Connection);
-            //    con.Open();
+                var con = new MySqlConnection(Connection);
+                con.Open();
 
-            //    const string query = "INSERT INTO attendance.user_login(user_id, username, password, role, active) VALUE (@uID, @uN, @pw, @rl, @act)";
-            //    var comm = new MySqlCommand(query, con);
-            //    comm.Parameters.AddWithValue("@uID", _count.ToString());
-            //    comm.Parameters.AddWithValue("@uN", _username);
-            //    comm.Parameters.AddWithValue("@pw", _password);
-            //    comm.Parameters.AddWithValue("@rl", _role);
-            //    comm.Parameters.AddWithValue("@act", 1);
-            //    comm.ExecuteNonQuery();
-            //    //inserting the username / password ... etc
-            //    if (_role == "Student")
-            //    {
-            //        string query1 = "INSERT INTO attendance.student(user_id, first_name, last_name, email, verified) VALUE (@uID, @fN, @lN, @em, @ver)";
-            //        comm = new MySqlCommand(query1, con);
-            //        comm.Parameters.AddWithValue("@uID", _count.ToString());
-            //        comm.Parameters.AddWithValue("@fN", _fName);
-            //        comm.Parameters.AddWithValue("@lN", _lName);
-            //        comm.Parameters.AddWithValue("@em", _eMail);
-            //        comm.Parameters.AddWithValue("@ver", 0);
-            //        comm.ExecuteNonQuery();
-            //    }
-            //    else
-            //    {
-            //        string query1 = "INSERT INTO attendance.professor(user_id, first_name, last_name, email, verified) VALUE (@uID, @fN, @lN, @em, @ver)";
-            //        comm = new MySqlCommand(query1, con);
-            //        comm.Parameters.AddWithValue("@uID", _count.ToString());
-            //        comm.Parameters.AddWithValue("@fN", _fName);
-            //        comm.Parameters.AddWithValue("@lN", _lName);
-            //        comm.Parameters.AddWithValue("@em", _eMail);
-            //        comm.Parameters.AddWithValue("@ver", 0);
-            //        comm.ExecuteNonQuery();
-            //    }
-            //    //inserting the information of student or teacher
-            //    con.Close();
+                const string query = "INSERT INTO attendance.user_login(user_id, username, password, role, active) VALUE (@uID, @uN, @pw, @rl, @act)";
+                var comm = new MySqlCommand(query, con);
+                comm.Parameters.AddWithValue("@uID", _count.ToString());
+                comm.Parameters.AddWithValue("@uN", _username);
+                comm.Parameters.AddWithValue("@pw", _password);
+                comm.Parameters.AddWithValue("@rl", _role);
+                comm.Parameters.AddWithValue("@act", 1);
+                comm.ExecuteNonQuery();
+                //inserting the username / password ... etc
+                if (_role == "Student")
+                {
+                    string query1 = "INSERT INTO attendance.student(user_id, first_name, last_name, email, verified) VALUE (@uID, @fN, @lN, @em, @ver)";
+                    comm = new MySqlCommand(query1, con);
+                    comm.Parameters.AddWithValue("@uID", _count.ToString());
+                    comm.Parameters.AddWithValue("@fN", _fName);
+                    comm.Parameters.AddWithValue("@lN", _lName);
+                    comm.Parameters.AddWithValue("@em", _eMail);
+                    comm.Parameters.AddWithValue("@ver", 0);
+                    comm.ExecuteNonQuery();
+                }
+                else
+                {
+                    string query1 = "INSERT INTO attendance.professor(user_id, first_name, last_name, email, verified) VALUE (@uID, @fN, @lN, @em, @ver)";
+                    comm = new MySqlCommand(query1, con);
+                    comm.Parameters.AddWithValue("@uID", _count.ToString());
+                    comm.Parameters.AddWithValue("@fN", _fName);
+                    comm.Parameters.AddWithValue("@lN", _lName);
+                    comm.Parameters.AddWithValue("@em", _eMail);
+                    comm.Parameters.AddWithValue("@ver", 0);
+                    comm.ExecuteNonQuery();
+                }
+                //inserting the information of student or teacher
+                con.Close();
 
-            //    //get a random verification code
-            //    Random randomCode = new Random();
-            //    _code = (randomCode.Next(11111, 99999)).ToString();
+                //get a random verification code
+                Random randomCode = new Random();
+                _code = (randomCode.Next(11111, 99999)).ToString();
 
-            //    sendEMail(_fName, _lName, _eMail, _code);
-            //    MessageBox.Show(_code);
-            //}
+                sendEMail(_fName, _lName, _eMail, _code);
+                MessageBox.Show(_code);
+            }
         }
 
         private void aetherButton3_Click(object sender, EventArgs e)
