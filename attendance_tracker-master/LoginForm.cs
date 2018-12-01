@@ -221,19 +221,19 @@ namespace attendance_tracker
                     Hide();
                     sForm.Show();
                 }
-                else if (_username == "admin" && _password == "admin")
-                {
-                    adminForm aForm = new adminForm();
-                    aForm.FormClosed += otherForm_FormClosed;
-                    Hide();
-                    aForm.Show();
-                }
                 else
                 {
                     MessageBox.Show(@"Your account is not activated!");
                 }
 
                 con.Close();
+            }
+            else if (_username == "admin" && _password == "admin")
+            {
+                adminForm aForm = new adminForm();
+                aForm.FormClosed += otherForm_FormClosed;
+                Hide();
+                aForm.Show();
             }
             else
                 MessageBox.Show(@"Please enter the correct username and password!");

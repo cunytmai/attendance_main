@@ -74,6 +74,7 @@
             this.aetherTextbox13 = new AetherTheme.AetherTextbox();
             this.trackTabPage = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.aetherButton8 = new AetherTheme.AetherButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -85,7 +86,6 @@
             this.aetherButton5 = new AetherTheme.AetherButton();
             this.aetherTextbox17 = new AetherTheme.AetherTextbox();
             this.aetherTag18 = new AetherTheme.AetherTag();
-            this.label5 = new System.Windows.Forms.Label();
             this.profTabControl1.SuspendLayout();
             this.homeTabPage.SuspendLayout();
             this.aetherGroupBox4.SuspendLayout();
@@ -737,6 +737,15 @@
             this.panel6.TabIndex = 16;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.label5.Location = new System.Drawing.Point(9, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 41);
+            this.label5.TabIndex = 0;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Silver;
@@ -866,15 +875,6 @@
             this.aetherTag18.TabIndex = 11;
             this.aetherTag18.Text = "Class ID";
             this.aetherTag18.TextColor = System.Drawing.Color.White;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.label5.Location = new System.Drawing.Point(9, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 41);
-            this.label5.TabIndex = 0;
             // 
             // ProfForm
             // 
