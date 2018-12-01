@@ -72,6 +72,7 @@
     <Compile Include="class_breakdown.Designer.cs">
       <DependentUpon>class_breakdown.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cryptography.cs" />
     <Compile Include="email_user.cs">
       <SubType>Form</SubType>
     </Compile>
