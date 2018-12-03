@@ -48,7 +48,6 @@
             this.aetherCircular2 = new AetherTheme.AetherCircular();
             this.aetherCircular1 = new AetherTheme.AetherCircular();
             this.classTabPage = new System.Windows.Forms.TabPage();
-            this.contactTabPage = new System.Windows.Forms.TabPage();
             this.listBoxEx1 = new CustomListBox.ListBoxEx();
             this.studentTabControl1.SuspendLayout();
             this.homeTabPage.SuspendLayout();
@@ -63,11 +62,10 @@
             this.studentTabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.studentTabControl1.Controls.Add(this.homeTabPage);
             this.studentTabControl1.Controls.Add(this.classTabPage);
-            this.studentTabControl1.Controls.Add(this.contactTabPage);
             this.studentTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.studentTabControl1.ItemSize = new System.Drawing.Size(40, 190);
             this.studentTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.studentTabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.studentTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.studentTabControl1.Multiline = true;
             this.studentTabControl1.Name = "studentTabControl1";
             this.studentTabControl1.SelectedIndex = 0;
@@ -84,9 +82,9 @@
             this.homeTabPage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.homeTabPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
             this.homeTabPage.Location = new System.Drawing.Point(194, 4);
-            this.homeTabPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homeTabPage.Margin = new System.Windows.Forms.Padding(4);
             this.homeTabPage.Name = "homeTabPage";
-            this.homeTabPage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homeTabPage.Padding = new System.Windows.Forms.Padding(4);
             this.homeTabPage.Size = new System.Drawing.Size(869, 546);
             this.homeTabPage.TabIndex = 0;
             this.homeTabPage.Text = "home";
@@ -106,7 +104,7 @@
             this.aetherGroupBox2.Footer = false;
             this.aetherGroupBox2.FooterText = null;
             this.aetherGroupBox2.Location = new System.Drawing.Point(4, 11);
-            this.aetherGroupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aetherGroupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.aetherGroupBox2.Name = "aetherGroupBox2";
             this.aetherGroupBox2.Size = new System.Drawing.Size(791, 263);
             this.aetherGroupBox2.TabIndex = 5;
@@ -157,7 +155,7 @@
             this.aetherTag7.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag7.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.aetherTag7.Location = new System.Drawing.Point(245, 178);
-            this.aetherTag7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aetherTag7.Margin = new System.Windows.Forms.Padding(4);
             this.aetherTag7.Name = "aetherTag7";
             this.aetherTag7.Size = new System.Drawing.Size(100, 15);
             this.aetherTag7.TabIndex = 4;
@@ -169,7 +167,7 @@
             this.aetherTag6.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag6.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.aetherTag6.Location = new System.Drawing.Point(245, 134);
-            this.aetherTag6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aetherTag6.Margin = new System.Windows.Forms.Padding(4);
             this.aetherTag6.Name = "aetherTag6";
             this.aetherTag6.Size = new System.Drawing.Size(100, 15);
             this.aetherTag6.TabIndex = 3;
@@ -181,7 +179,7 @@
             this.aetherTag5.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag5.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.aetherTag5.Location = new System.Drawing.Point(245, 91);
-            this.aetherTag5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aetherTag5.Margin = new System.Windows.Forms.Padding(4);
             this.aetherTag5.Name = "aetherTag5";
             this.aetherTag5.Size = new System.Drawing.Size(100, 15);
             this.aetherTag5.TabIndex = 2;
@@ -193,7 +191,7 @@
             this.aetherTag4.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag4.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.aetherTag4.Location = new System.Drawing.Point(245, 52);
-            this.aetherTag4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aetherTag4.Margin = new System.Windows.Forms.Padding(4);
             this.aetherTag4.Name = "aetherTag4";
             this.aetherTag4.Size = new System.Drawing.Size(100, 15);
             this.aetherTag4.TabIndex = 1;
@@ -205,7 +203,7 @@
             this.pictureBox1.ImageLocation = "";
             this.pictureBox1.InitialImage = global::attendance_tracker.Properties.Resources.images;
             this.pictureBox1.Location = new System.Drawing.Point(5, 52);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(169, 112);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -223,7 +221,7 @@
             this.aetherGroupBox1.Footer = false;
             this.aetherGroupBox1.FooterText = null;
             this.aetherGroupBox1.Location = new System.Drawing.Point(4, 282);
-            this.aetherGroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aetherGroupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.aetherGroupBox1.Name = "aetherGroupBox1";
             this.aetherGroupBox1.Size = new System.Drawing.Size(791, 178);
             this.aetherGroupBox1.TabIndex = 4;
@@ -234,7 +232,7 @@
             this.aetherTag3.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag3.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.aetherTag3.Location = new System.Drawing.Point(608, 58);
-            this.aetherTag3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aetherTag3.Margin = new System.Windows.Forms.Padding(4);
             this.aetherTag3.Name = "aetherTag3";
             this.aetherTag3.Size = new System.Drawing.Size(183, 15);
             this.aetherTag3.TabIndex = 7;
@@ -247,7 +245,7 @@
             this.aetherCircular3.HatchPrimary = System.Drawing.Color.Green;
             this.aetherCircular3.HatchSecondary = System.Drawing.Color.Red;
             this.aetherCircular3.Location = new System.Drawing.Point(653, 84);
-            this.aetherCircular3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aetherCircular3.Margin = new System.Windows.Forms.Padding(4);
             this.aetherCircular3.Max = 100F;
             this.aetherCircular3.Min = 0F;
             this.aetherCircular3.Name = "aetherCircular3";
@@ -261,7 +259,7 @@
             this.aetherTag2.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag2.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.aetherTag2.Location = new System.Drawing.Point(315, 58);
-            this.aetherTag2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aetherTag2.Margin = new System.Windows.Forms.Padding(4);
             this.aetherTag2.Name = "aetherTag2";
             this.aetherTag2.Size = new System.Drawing.Size(156, 15);
             this.aetherTag2.TabIndex = 5;
@@ -273,7 +271,7 @@
             this.aetherTag1.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag1.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.aetherTag1.Location = new System.Drawing.Point(4, 58);
-            this.aetherTag1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aetherTag1.Margin = new System.Windows.Forms.Padding(4);
             this.aetherTag1.Name = "aetherTag1";
             this.aetherTag1.Size = new System.Drawing.Size(171, 15);
             this.aetherTag1.TabIndex = 4;
@@ -286,7 +284,7 @@
             this.aetherCircular2.HatchPrimary = System.Drawing.Color.Green;
             this.aetherCircular2.HatchSecondary = System.Drawing.Color.Red;
             this.aetherCircular2.Location = new System.Drawing.Point(343, 84);
-            this.aetherCircular2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aetherCircular2.Margin = new System.Windows.Forms.Padding(4);
             this.aetherCircular2.Max = 100F;
             this.aetherCircular2.Min = 0F;
             this.aetherCircular2.Name = "aetherCircular2";
@@ -301,7 +299,7 @@
             this.aetherCircular1.HatchPrimary = System.Drawing.Color.Green;
             this.aetherCircular1.HatchSecondary = System.Drawing.Color.Red;
             this.aetherCircular1.Location = new System.Drawing.Point(43, 84);
-            this.aetherCircular1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aetherCircular1.Margin = new System.Windows.Forms.Padding(4);
             this.aetherCircular1.Max = 100F;
             this.aetherCircular1.Min = 0F;
             this.aetherCircular1.Name = "aetherCircular1";
@@ -317,26 +315,14 @@
             this.classTabPage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.classTabPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
             this.classTabPage.Location = new System.Drawing.Point(194, 4);
-            this.classTabPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.classTabPage.Margin = new System.Windows.Forms.Padding(4);
             this.classTabPage.Name = "classTabPage";
-            this.classTabPage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.classTabPage.Padding = new System.Windows.Forms.Padding(4);
             this.classTabPage.Size = new System.Drawing.Size(869, 546);
             this.classTabPage.TabIndex = 1;
             this.classTabPage.Text = "Classes";
             this.classTabPage.Click += new System.EventHandler(this.classTabPage_Click);
             this.classTabPage.Enter += new System.EventHandler(this.classTabPage_Enter);
-            // 
-            // contactTabPage
-            // 
-            this.contactTabPage.BackColor = System.Drawing.Color.White;
-            this.contactTabPage.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.contactTabPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.contactTabPage.Location = new System.Drawing.Point(194, 4);
-            this.contactTabPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.contactTabPage.Name = "contactTabPage";
-            this.contactTabPage.Size = new System.Drawing.Size(869, 546);
-            this.contactTabPage.TabIndex = 2;
-            this.contactTabPage.Text = "contact";
             // 
             // listBoxEx1
             // 
@@ -356,7 +342,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.studentTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "StudentForm";
             this.ShowIcon = false;
@@ -378,7 +364,6 @@
 
         private AetherTheme.AetherTabControl studentTabControl1;
         private System.Windows.Forms.TabPage homeTabPage;
-        private System.Windows.Forms.TabPage contactTabPage;
         private AetherTheme.AetherGroupBox aetherGroupBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private AetherTheme.AetherGroupBox aetherGroupBox1;

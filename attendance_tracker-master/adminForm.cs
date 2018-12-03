@@ -261,7 +261,6 @@ namespace attendance_tracker
         private void aetherButton2_Click(object sender, EventArgs e)
         {
             string query;
-            MessageBox.Show(uID);
             MySqlConnection con = new MySqlConnection(_connection);
             con.Open();
 

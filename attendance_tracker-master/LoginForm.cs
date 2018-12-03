@@ -54,7 +54,7 @@ namespace attendance_tracker
         private readonly List<string> _roleList = new List<string>();
         private string _username, _password;
         private int _count = 1;
-        private string _userId, _userRole, _userDb, _passDb; //for button 1
+        private string _userId, _userRole, _userDb, _passDb, _userActive; //for button 1
         private string _fName, _lName, _eMail, _role; //for button 2
         private string _code; //for button 3
 
@@ -79,11 +79,6 @@ namespace attendance_tracker
             string key = string.Concat(_username, _count.ToString());
             string encryptPassword = Cryptography.Encrypt(_password, key);
             string decryptPassword = Cryptography.Decrypt(encryptPassword, key);
-
-            MessageBox.Show(_password);
-            MessageBox.Show(encryptPassword);
-            MessageBox.Show(decryptPassword);
-            MessageBox.Show(key);
 
             if (string.IsNullOrEmpty(_fName))
                 MessageBox.Show(@"Please enter a first name.");
@@ -111,7 +106,7 @@ namespace attendance_tracker
                 var comm = new MySqlCommand(query, con);
                 comm.Parameters.AddWithValue("@uID", _count.ToString());
                 comm.Parameters.AddWithValue("@uN", _username);
-                comm.Parameters.AddWithValue("@pw", _password);
+                comm.Parameters.AddWithValue("@pw", encryptPassword);
                 comm.Parameters.AddWithValue("@rl", _role);
                 comm.Parameters.AddWithValue("@act", 1);
                 comm.ExecuteNonQuery();
@@ -146,7 +141,6 @@ namespace attendance_tracker
                 _code = (randomCode.Next(11111, 99999)).ToString();
 
                 sendEMail(_fName, _lName, _eMail, _code);
-                MessageBox.Show(_code);
             }
         }
 
@@ -182,25 +176,29 @@ namespace attendance_tracker
 
         private void aetherButton1_Click(object sender, EventArgs e)
         {
+            GetInfo();
             _username = aetherTextbox1.Text;
             _password = aetherTextbox2.Text;
-            GetInfo();
+
+            for (var i = 0; i < _count - 1; i++)
+            {
+                if (_usernameList[i] == _username)
+                {
+                    _userId = _userIdList[i];
+                    _userDb = _usernameList[i];
+                    _passDb = _passwordList[i];
+                    _userRole = _roleList[i];
+                }
+            }
+
+            //hashing
+            string key = string.Concat(_username, _userId);
+            string encryptPassword = Cryptography.Encrypt(_password, key);
+            string decryptPasswordDB = Cryptography.Decrypt(encryptPassword, key);
 
             //checks if the username and password exists
-            if (_usernameList.Exists(x => x == _username) && _passwordList.Exists(y => y == _password))
+            if (_usernameList.Exists(x => x == _username) && _passwordList.Exists(y => y == encryptPassword))
             {
-                for (var i = 0; i < _count - 1; i++)
-                {
-                    if (_usernameList[i] == _username)
-                    {
-                        _userId = _userIdList[i];
-                        _userDb = _usernameList[i];
-                        _passDb = _passwordList[i];
-                        _userRole = _roleList[i];
-                        //get the verified true or false
-                    }
-                }
-
                 MySqlConnection con = new MySqlConnection(Connection);
                 con.Open();
 
@@ -210,19 +208,25 @@ namespace attendance_tracker
                     query = "SELECT verified FROM student where user_id = '" + _userId + "'";
                 else
                     query = "SELECT verified FROM professor where user_id = '" + _userId + "'";
-
+               
                 MySqlCommand comm = new MySqlCommand(query, con);
                 comm.Parameters.AddWithValue(@"Uid", _userId);
-                var result = comm.ExecuteScalar().ToString();
+                var result1 = comm.ExecuteScalar().ToString();
 
-                if (_userRole == "Professor" && _userDb == _username && _passDb == _password && result == "True")
+
+                query = "SELECT active FROM user_login where user_id = '" + _userId + "'";
+                comm = new MySqlCommand(query, con);
+                comm.Parameters.AddWithValue(@"Uid", _userId);
+                var result2 = comm.ExecuteScalar().ToString();
+
+                if (_userRole == "Professor" && _userDb == _username && decryptPasswordDB == _password && result1 == "True" && result2 == "True")
                 {
                     ProfForm pForm = new ProfForm(_userId); //pass over the user_id and use that to get the info
                     pForm.FormClosed += otherForm_FormClosed;
                     Hide();
                     pForm.Show();
                 }
-                else if (_userRole == "Student" && _userDb == _username && _passDb == _password && result == "True")
+                else if (_userRole == "Student" && _userDb == _username && decryptPasswordDB == _password && result1 == "True" && result2 == "True")
                 {
                     StudentForm sForm = new StudentForm(_userId); //pass over the user_id and use that to get the info
                     sForm.FormClosed += otherForm_FormClosed;
