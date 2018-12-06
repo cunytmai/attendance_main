@@ -12,11 +12,18 @@ namespace attendance_tracker
 {
     public partial class LoginForm : Form
     {
+        /// <summary>
+        /// Constructor for the login form
+        /// </summary>
         public LoginForm()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Load all the neccessary information when the form opens
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
             var iconsList = new ImageList
@@ -39,13 +46,17 @@ namespace attendance_tracker
             aetherTextbox2.Text = Properties.Settings.Default.Password;
             aetherCheckBox1.Checked = Properties.Settings.Default.remember_me;
         }
-
+        /// <summary>
+        /// Return default connection string
+        /// </summary>
         static string GetConnectionStrings()
         {
             var settings = ConfigurationManager.ConnectionStrings["Connection"];
             return settings.ConnectionString;
         }
-
+        /// <summary>
+        /// Global Vars
+        /// </summary>
         private static readonly string Connection = GetConnectionStrings();
 
         private readonly List<string> _usernameList = new List<string>();
@@ -61,10 +72,27 @@ namespace attendance_tracker
         private string _userId, _userRole, _userDb, _passDb, _userActive; //for button 1
         private string _fName, _lName, _eMail, _role; //for button 2
         private string _code; //for button 3
-
-        private void aetherCheckBox1_CheckedChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Remember the lastest user information upon closing the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            if (aetherCheckBox1.Checked)
+            {
+                Properties.Settings.Default.UserName = aetherTextbox1.Text;
+                Properties.Settings.Default.Password = aetherTextbox2.Text;
+                Properties.Settings.Default.remember_me = true;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                Properties.Settings.Default.UserName = string.Empty;
+                Properties.Settings.Default.Password = string.Empty;
+                Properties.Settings.Default.remember_me = false;
+                Properties.Settings.Default.Save();
+            }
         }
 
         //TODO: fix this, not working as intended.
@@ -74,7 +102,11 @@ namespace attendance_tracker
             if (e.KeyCode == Keys.Enter)
                 aetherButton1_Click(this, new EventArgs());
         }
-
+        /// <summary>
+        /// Registering an account
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aetherButton2_Click_1(object sender, EventArgs e)
         {
             GetInfo();
@@ -105,7 +137,7 @@ namespace attendance_tracker
                 MessageBox.Show(@"Please enter a valid email.");
             else
             {
-                MessageBox.Show(@"Thank you for creating an account. As the next step, please verify your account." + @"\n"
+                MessageBox.Show(@"Thank you for creating an account. As the next step, please verify your account." + @" "
                     + @"A verification code was sent to your email, please enter it below.");
 
                 var con = new MySqlConnection(Connection);
@@ -152,7 +184,11 @@ namespace attendance_tracker
                 sendEMail(_fName, _lName, _eMail, _code);
             }
         }
-
+        /// <summary>
+        /// Verification of the user account
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aetherButton3_Click(object sender, EventArgs e)
         {
             if (_eMail == aetherTextbox6.Text && _code == aetherTextbox7.Text)
@@ -182,7 +218,11 @@ namespace attendance_tracker
             else
                 MessageBox.Show(@"Wrong E-Mail or Code!");
         }
-
+        /// <summary>
+        /// Login with existing user information
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aetherButton1_Click(object sender, EventArgs e)
         {
             GetInfo();
@@ -273,12 +313,18 @@ namespace attendance_tracker
             else
                 MessageBox.Show(@"Please enter the correct username and password!");
         }
-
+        /// <summary>
+        /// When all forms are closed show login form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void otherForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Show();
         }
-
+        /// <summary>
+        /// Preload all user information from database
+        /// </summary>
         private void GetInfo()
         {
             //clear everything in every list
@@ -368,6 +414,10 @@ namespace attendance_tracker
             }
             con.Close();
         }
+        /// <summary>
+        /// REGEX used to check for valid email address
+        /// </summary>
+        /// <param name="email"></param>
         private bool IsValidEmail(string email)
         {
             const string pattern = @"^[\w!#$%&'*+\-/=?\^_`{|}~]+(\.[\w!#$%&'*+\-/=?\^_`{|}~]+)*"
@@ -378,7 +428,13 @@ namespace attendance_tracker
 
             return regex.IsMatch(email);
         }
-
+        /// <summary>
+        /// Sending the verification email
+        /// </summary>
+        /// <param name="fName"></param>
+        /// <param name="lName"></param>
+        /// <param name="eMail"></param>
+        /// <param name="code"></param>
         private void sendEMail(string fName, string lName, string eMail, string code)
         {
             //SMTP

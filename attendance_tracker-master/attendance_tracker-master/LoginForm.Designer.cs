@@ -78,11 +78,10 @@
             this.aetherTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.aetherTabControl1.ItemSize = new System.Drawing.Size(40, 190);
             this.aetherTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.aetherTabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.aetherTabControl1.Multiline = true;
             this.aetherTabControl1.Name = "aetherTabControl1";
             this.aetherTabControl1.SelectedIndex = 0;
-            this.aetherTabControl1.Size = new System.Drawing.Size(1185, 608);
+            this.aetherTabControl1.Size = new System.Drawing.Size(889, 494);
             this.aetherTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.aetherTabControl1.TabIndex = 0;
             this.aetherTabControl1.UpperText = true;
@@ -102,20 +101,18 @@
             this.loginTabPage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.loginTabPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
             this.loginTabPage.Location = new System.Drawing.Point(194, 4);
-            this.loginTabPage.Margin = new System.Windows.Forms.Padding(4);
             this.loginTabPage.Name = "loginTabPage";
-            this.loginTabPage.Padding = new System.Windows.Forms.Padding(4);
-            this.loginTabPage.Size = new System.Drawing.Size(987, 600);
+            this.loginTabPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.loginTabPage.Size = new System.Drawing.Size(691, 486);
             this.loginTabPage.TabIndex = 0;
             this.loginTabPage.Text = "Login";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::attendance_tracker.Properties.Resources._1;
-            this.pictureBox2.Location = new System.Drawing.Point(9, 201);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(7, 163);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(909, 396);
+            this.pictureBox2.Size = new System.Drawing.Size(682, 322);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
@@ -123,10 +120,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::attendance_tracker.Properties.Resources.images;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(445, 192);
+            this.pictureBox1.Size = new System.Drawing.Size(334, 156);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -135,21 +131,18 @@
             this.aetherCheckBox1.Checked = false;
             this.aetherCheckBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.aetherCheckBox1.EnabledCalc = true;
-            this.aetherCheckBox1.Location = new System.Drawing.Point(775, 66);
-            this.aetherCheckBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherCheckBox1.Location = new System.Drawing.Point(581, 54);
             this.aetherCheckBox1.Name = "aetherCheckBox1";
-            this.aetherCheckBox1.Size = new System.Drawing.Size(137, 19);
+            this.aetherCheckBox1.Size = new System.Drawing.Size(103, 19);
             this.aetherCheckBox1.TabIndex = 5;
             this.aetherCheckBox1.Text = "remember me";
-            this.aetherCheckBox1.CheckedChanged += new AetherTheme.AetherCheckBox.CheckedChangedEventHandler(this.aetherCheckBox1_CheckedChanged);
             // 
             // aetherButton1
             // 
             this.aetherButton1.EnabledCalc = true;
-            this.aetherButton1.Location = new System.Drawing.Point(775, 12);
-            this.aetherButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherButton1.Location = new System.Drawing.Point(581, 10);
             this.aetherButton1.Name = "aetherButton1";
-            this.aetherButton1.Size = new System.Drawing.Size(144, 34);
+            this.aetherButton1.Size = new System.Drawing.Size(108, 28);
             this.aetherButton1.TabIndex = 4;
             this.aetherButton1.Text = "Login";
             this.aetherButton1.Click += new AetherTheme.AetherButton.ClickEventHandler(this.aetherButton1_Click);
@@ -158,10 +151,9 @@
             // 
             this.aetherTag2.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag2.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.aetherTag2.Location = new System.Drawing.Point(472, 66);
-            this.aetherTag2.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTag2.Location = new System.Drawing.Point(354, 54);
             this.aetherTag2.Name = "aetherTag2";
-            this.aetherTag2.Size = new System.Drawing.Size(100, 15);
+            this.aetherTag2.Size = new System.Drawing.Size(75, 15);
             this.aetherTag2.TabIndex = 3;
             this.aetherTag2.Text = "Password";
             this.aetherTag2.TextColor = System.Drawing.Color.White;
@@ -172,10 +164,9 @@
             this.aetherTag1.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag1.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.aetherTag1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.aetherTag1.Location = new System.Drawing.Point(472, 15);
-            this.aetherTag1.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTag1.Location = new System.Drawing.Point(354, 12);
             this.aetherTag1.Name = "aetherTag1";
-            this.aetherTag1.Size = new System.Drawing.Size(100, 15);
+            this.aetherTag1.Size = new System.Drawing.Size(75, 15);
             this.aetherTag1.TabIndex = 2;
             this.aetherTag1.Text = "username";
             this.aetherTag1.TextColor = System.Drawing.Color.White;
@@ -185,13 +176,12 @@
             this.aetherTextbox2.EnabledCalc = true;
             this.aetherTextbox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.aetherTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.aetherTextbox2.Location = new System.Drawing.Point(580, 54);
-            this.aetherTextbox2.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTextbox2.Location = new System.Drawing.Point(435, 44);
             this.aetherTextbox2.MaxLength = 32767;
             this.aetherTextbox2.MultiLine = false;
             this.aetherTextbox2.Name = "aetherTextbox2";
             this.aetherTextbox2.ReadOnly = false;
-            this.aetherTextbox2.Size = new System.Drawing.Size(173, 36);
+            this.aetherTextbox2.Size = new System.Drawing.Size(130, 29);
             this.aetherTextbox2.TabIndex = 1;
             this.aetherTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.aetherTextbox2.UseSystemPasswordChar = true;
@@ -202,13 +192,12 @@
             this.aetherTextbox1.EnabledCalc = true;
             this.aetherTextbox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.aetherTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.aetherTextbox1.Location = new System.Drawing.Point(580, 11);
-            this.aetherTextbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTextbox1.Location = new System.Drawing.Point(435, 9);
             this.aetherTextbox1.MaxLength = 32767;
             this.aetherTextbox1.MultiLine = false;
             this.aetherTextbox1.Name = "aetherTextbox1";
             this.aetherTextbox1.ReadOnly = false;
-            this.aetherTextbox1.Size = new System.Drawing.Size(173, 36);
+            this.aetherTextbox1.Size = new System.Drawing.Size(130, 29);
             this.aetherTextbox1.TabIndex = 0;
             this.aetherTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.aetherTextbox1.UseSystemPasswordChar = false;
@@ -221,10 +210,9 @@
             this.registerTabPage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.registerTabPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
             this.registerTabPage.Location = new System.Drawing.Point(194, 4);
-            this.registerTabPage.Margin = new System.Windows.Forms.Padding(4);
             this.registerTabPage.Name = "registerTabPage";
-            this.registerTabPage.Padding = new System.Windows.Forms.Padding(4);
-            this.registerTabPage.Size = new System.Drawing.Size(987, 600);
+            this.registerTabPage.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.registerTabPage.Size = new System.Drawing.Size(691, 486);
             this.registerTabPage.TabIndex = 1;
             this.registerTabPage.Text = "register";
             // 
@@ -237,20 +225,18 @@
             this.aetherGroupBox3.Controls.Add(this.aetherTag6);
             this.aetherGroupBox3.Footer = false;
             this.aetherGroupBox3.FooterText = null;
-            this.aetherGroupBox3.Location = new System.Drawing.Point(5, 290);
-            this.aetherGroupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherGroupBox3.Location = new System.Drawing.Point(4, 236);
             this.aetherGroupBox3.Name = "aetherGroupBox3";
-            this.aetherGroupBox3.Size = new System.Drawing.Size(924, 321);
+            this.aetherGroupBox3.Size = new System.Drawing.Size(693, 261);
             this.aetherGroupBox3.TabIndex = 2;
             this.aetherGroupBox3.Text = "Account Verification";
             // 
             // aetherButton3
             // 
             this.aetherButton3.EnabledCalc = true;
-            this.aetherButton3.Location = new System.Drawing.Point(203, 198);
-            this.aetherButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherButton3.Location = new System.Drawing.Point(152, 161);
             this.aetherButton3.Name = "aetherButton3";
-            this.aetherButton3.Size = new System.Drawing.Size(453, 28);
+            this.aetherButton3.Size = new System.Drawing.Size(340, 23);
             this.aetherButton3.TabIndex = 4;
             this.aetherButton3.Text = "VERIFY";
             this.aetherButton3.Click += new AetherTheme.AetherButton.ClickEventHandler(this.aetherButton3_Click);
@@ -260,13 +246,12 @@
             this.aetherTextbox7.EnabledCalc = true;
             this.aetherTextbox7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.aetherTextbox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.aetherTextbox7.Location = new System.Drawing.Point(127, 128);
-            this.aetherTextbox7.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTextbox7.Location = new System.Drawing.Point(95, 104);
             this.aetherTextbox7.MaxLength = 32767;
             this.aetherTextbox7.MultiLine = false;
             this.aetherTextbox7.Name = "aetherTextbox7";
             this.aetherTextbox7.ReadOnly = false;
-            this.aetherTextbox7.Size = new System.Drawing.Size(353, 36);
+            this.aetherTextbox7.Size = new System.Drawing.Size(265, 29);
             this.aetherTextbox7.TabIndex = 3;
             this.aetherTextbox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.aetherTextbox7.UseSystemPasswordChar = false;
@@ -276,13 +261,12 @@
             this.aetherTextbox6.EnabledCalc = true;
             this.aetherTextbox6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.aetherTextbox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.aetherTextbox6.Location = new System.Drawing.Point(125, 69);
-            this.aetherTextbox6.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTextbox6.Location = new System.Drawing.Point(94, 56);
             this.aetherTextbox6.MaxLength = 32767;
             this.aetherTextbox6.MultiLine = false;
             this.aetherTextbox6.Name = "aetherTextbox6";
             this.aetherTextbox6.ReadOnly = false;
-            this.aetherTextbox6.Size = new System.Drawing.Size(355, 36);
+            this.aetherTextbox6.Size = new System.Drawing.Size(266, 29);
             this.aetherTextbox6.TabIndex = 2;
             this.aetherTextbox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.aetherTextbox6.UseSystemPasswordChar = false;
@@ -291,10 +275,9 @@
             // 
             this.aetherTag7.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag7.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.aetherTag7.Location = new System.Drawing.Point(17, 135);
-            this.aetherTag7.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTag7.Location = new System.Drawing.Point(13, 110);
             this.aetherTag7.Name = "aetherTag7";
-            this.aetherTag7.Size = new System.Drawing.Size(100, 15);
+            this.aetherTag7.Size = new System.Drawing.Size(75, 15);
             this.aetherTag7.TabIndex = 1;
             this.aetherTag7.Text = "Code";
             this.aetherTag7.TextColor = System.Drawing.Color.White;
@@ -303,10 +286,9 @@
             // 
             this.aetherTag6.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag6.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.aetherTag6.Location = new System.Drawing.Point(17, 76);
-            this.aetherTag6.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTag6.Location = new System.Drawing.Point(13, 62);
             this.aetherTag6.Name = "aetherTag6";
-            this.aetherTag6.Size = new System.Drawing.Size(100, 15);
+            this.aetherTag6.Size = new System.Drawing.Size(75, 15);
             this.aetherTag6.TabIndex = 0;
             this.aetherTag6.Text = "Email";
             this.aetherTag6.TextColor = System.Drawing.Color.White;
@@ -327,10 +309,9 @@
             this.aetherGroupBox1.Controls.Add(this.aetherTag3);
             this.aetherGroupBox1.Footer = false;
             this.aetherGroupBox1.FooterText = null;
-            this.aetherGroupBox1.Location = new System.Drawing.Point(4, 0);
-            this.aetherGroupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherGroupBox1.Location = new System.Drawing.Point(3, 0);
             this.aetherGroupBox1.Name = "aetherGroupBox1";
-            this.aetherGroupBox1.Size = new System.Drawing.Size(925, 282);
+            this.aetherGroupBox1.Size = new System.Drawing.Size(694, 229);
             this.aetherGroupBox1.TabIndex = 1;
             this.aetherGroupBox1.Text = "New User Registration";
             // 
@@ -339,13 +320,12 @@
             this.aetherTextbox8.EnabledCalc = true;
             this.aetherTextbox8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.aetherTextbox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.aetherTextbox8.Location = new System.Drawing.Point(620, 103);
-            this.aetherTextbox8.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTextbox8.Location = new System.Drawing.Point(465, 84);
             this.aetherTextbox8.MaxLength = 32767;
             this.aetherTextbox8.MultiLine = false;
             this.aetherTextbox8.Name = "aetherTextbox8";
             this.aetherTextbox8.ReadOnly = false;
-            this.aetherTextbox8.Size = new System.Drawing.Size(275, 36);
+            this.aetherTextbox8.Size = new System.Drawing.Size(206, 29);
             this.aetherTextbox8.TabIndex = 7;
             this.aetherTextbox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.aetherTextbox8.UseSystemPasswordChar = true;
@@ -353,10 +333,9 @@
             // aetherButton2
             // 
             this.aetherButton2.EnabledCalc = true;
-            this.aetherButton2.Location = new System.Drawing.Point(189, 250);
-            this.aetherButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherButton2.Location = new System.Drawing.Point(142, 203);
             this.aetherButton2.Name = "aetherButton2";
-            this.aetherButton2.Size = new System.Drawing.Size(453, 28);
+            this.aetherButton2.Size = new System.Drawing.Size(340, 23);
             this.aetherButton2.TabIndex = 8;
             this.aetherButton2.Text = "REGISTER";
             this.aetherButton2.Click += new AetherTheme.AetherButton.ClickEventHandler(this.aetherButton2_Click_1);
@@ -365,10 +344,9 @@
             // 
             this.aetherTag8.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag8.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.aetherTag8.Location = new System.Drawing.Point(511, 111);
-            this.aetherTag8.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTag8.Location = new System.Drawing.Point(383, 90);
             this.aetherTag8.Name = "aetherTag8";
-            this.aetherTag8.Size = new System.Drawing.Size(100, 15);
+            this.aetherTag8.Size = new System.Drawing.Size(75, 15);
             this.aetherTag8.TabIndex = 6;
             this.aetherTag8.Text = "Password";
             this.aetherTag8.TextColor = System.Drawing.Color.White;
@@ -378,13 +356,12 @@
             this.aetherTextbox5.EnabledCalc = true;
             this.aetherTextbox5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.aetherTextbox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.aetherTextbox5.Location = new System.Drawing.Point(128, 162);
-            this.aetherTextbox5.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTextbox5.Location = new System.Drawing.Point(96, 132);
             this.aetherTextbox5.MaxLength = 32767;
             this.aetherTextbox5.MultiLine = false;
             this.aetherTextbox5.Name = "aetherTextbox5";
             this.aetherTextbox5.ReadOnly = false;
-            this.aetherTextbox5.Size = new System.Drawing.Size(353, 36);
+            this.aetherTextbox5.Size = new System.Drawing.Size(265, 29);
             this.aetherTextbox5.TabIndex = 7;
             this.aetherTextbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.aetherTextbox5.UseSystemPasswordChar = false;
@@ -394,13 +371,12 @@
             this.aetherTextbox9.EnabledCalc = true;
             this.aetherTextbox9.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.aetherTextbox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.aetherTextbox9.Location = new System.Drawing.Point(619, 38);
-            this.aetherTextbox9.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTextbox9.Location = new System.Drawing.Point(464, 31);
             this.aetherTextbox9.MaxLength = 32767;
             this.aetherTextbox9.MultiLine = false;
             this.aetherTextbox9.Name = "aetherTextbox9";
             this.aetherTextbox9.ReadOnly = false;
-            this.aetherTextbox9.Size = new System.Drawing.Size(276, 36);
+            this.aetherTextbox9.Size = new System.Drawing.Size(207, 29);
             this.aetherTextbox9.TabIndex = 5;
             this.aetherTextbox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.aetherTextbox9.UseSystemPasswordChar = false;
@@ -409,10 +385,9 @@
             // 
             this.aetherTag5.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag5.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.aetherTag5.Location = new System.Drawing.Point(19, 170);
-            this.aetherTag5.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTag5.Location = new System.Drawing.Point(14, 138);
             this.aetherTag5.Name = "aetherTag5";
-            this.aetherTag5.Size = new System.Drawing.Size(100, 15);
+            this.aetherTag5.Size = new System.Drawing.Size(75, 15);
             this.aetherTag5.TabIndex = 6;
             this.aetherTag5.Text = "Email";
             this.aetherTag5.TextColor = System.Drawing.Color.White;
@@ -421,10 +396,9 @@
             // 
             this.aetherTag9.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag9.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.aetherTag9.Location = new System.Drawing.Point(511, 46);
-            this.aetherTag9.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTag9.Location = new System.Drawing.Point(383, 37);
             this.aetherTag9.Name = "aetherTag9";
-            this.aetherTag9.Size = new System.Drawing.Size(100, 15);
+            this.aetherTag9.Size = new System.Drawing.Size(75, 15);
             this.aetherTag9.TabIndex = 4;
             this.aetherTag9.Text = "Username";
             this.aetherTag9.TextColor = System.Drawing.Color.White;
@@ -435,10 +409,9 @@
             this.aetherGroupBox2.Controls.Add(this.aetherRadioButton1);
             this.aetherGroupBox2.Footer = false;
             this.aetherGroupBox2.FooterText = null;
-            this.aetherGroupBox2.Location = new System.Drawing.Point(525, 134);
-            this.aetherGroupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherGroupBox2.Location = new System.Drawing.Point(394, 109);
             this.aetherGroupBox2.Name = "aetherGroupBox2";
-            this.aetherGroupBox2.Size = new System.Drawing.Size(396, 101);
+            this.aetherGroupBox2.Size = new System.Drawing.Size(297, 82);
             this.aetherGroupBox2.TabIndex = 5;
             this.aetherGroupBox2.Text = "Role";
             // 
@@ -447,10 +420,9 @@
             this.aetherRadioButton2.Checked = false;
             this.aetherRadioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.aetherRadioButton2.EnabledCalc = true;
-            this.aetherRadioButton2.Location = new System.Drawing.Point(195, 54);
-            this.aetherRadioButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherRadioButton2.Location = new System.Drawing.Point(146, 44);
             this.aetherRadioButton2.Name = "aetherRadioButton2";
-            this.aetherRadioButton2.Size = new System.Drawing.Size(185, 19);
+            this.aetherRadioButton2.Size = new System.Drawing.Size(139, 19);
             this.aetherRadioButton2.TabIndex = 1;
             this.aetherRadioButton2.Text = "Professor";
             // 
@@ -459,10 +431,9 @@
             this.aetherRadioButton1.Checked = false;
             this.aetherRadioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.aetherRadioButton1.EnabledCalc = true;
-            this.aetherRadioButton1.Location = new System.Drawing.Point(5, 54);
-            this.aetherRadioButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherRadioButton1.Location = new System.Drawing.Point(4, 44);
             this.aetherRadioButton1.Name = "aetherRadioButton1";
-            this.aetherRadioButton1.Size = new System.Drawing.Size(181, 19);
+            this.aetherRadioButton1.Size = new System.Drawing.Size(136, 19);
             this.aetherRadioButton1.TabIndex = 0;
             this.aetherRadioButton1.Text = "Student";
             // 
@@ -471,13 +442,12 @@
             this.aetherTextbox4.EnabledCalc = true;
             this.aetherTextbox4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.aetherTextbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.aetherTextbox4.Location = new System.Drawing.Point(128, 103);
-            this.aetherTextbox4.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTextbox4.Location = new System.Drawing.Point(96, 84);
             this.aetherTextbox4.MaxLength = 32767;
             this.aetherTextbox4.MultiLine = false;
             this.aetherTextbox4.Name = "aetherTextbox4";
             this.aetherTextbox4.ReadOnly = false;
-            this.aetherTextbox4.Size = new System.Drawing.Size(353, 36);
+            this.aetherTextbox4.Size = new System.Drawing.Size(265, 29);
             this.aetherTextbox4.TabIndex = 3;
             this.aetherTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.aetherTextbox4.UseSystemPasswordChar = false;
@@ -486,10 +456,9 @@
             // 
             this.aetherTag4.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag4.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.aetherTag4.Location = new System.Drawing.Point(19, 111);
-            this.aetherTag4.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTag4.Location = new System.Drawing.Point(14, 90);
             this.aetherTag4.Name = "aetherTag4";
-            this.aetherTag4.Size = new System.Drawing.Size(100, 15);
+            this.aetherTag4.Size = new System.Drawing.Size(75, 15);
             this.aetherTag4.TabIndex = 2;
             this.aetherTag4.Text = "Last Name";
             this.aetherTag4.TextColor = System.Drawing.Color.White;
@@ -499,13 +468,12 @@
             this.aetherTextbox3.EnabledCalc = true;
             this.aetherTextbox3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.aetherTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(56)))), ((int)(((byte)(67)))));
-            this.aetherTextbox3.Location = new System.Drawing.Point(127, 38);
-            this.aetherTextbox3.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTextbox3.Location = new System.Drawing.Point(95, 31);
             this.aetherTextbox3.MaxLength = 32767;
             this.aetherTextbox3.MultiLine = false;
             this.aetherTextbox3.Name = "aetherTextbox3";
             this.aetherTextbox3.ReadOnly = false;
-            this.aetherTextbox3.Size = new System.Drawing.Size(355, 36);
+            this.aetherTextbox3.Size = new System.Drawing.Size(266, 29);
             this.aetherTextbox3.TabIndex = 1;
             this.aetherTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.aetherTextbox3.UseSystemPasswordChar = false;
@@ -514,10 +482,9 @@
             // 
             this.aetherTag3.Background = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(68)))), ((int)(((byte)(82)))));
             this.aetherTag3.Border = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.aetherTag3.Location = new System.Drawing.Point(19, 46);
-            this.aetherTag3.Margin = new System.Windows.Forms.Padding(4);
+            this.aetherTag3.Location = new System.Drawing.Point(14, 37);
             this.aetherTag3.Name = "aetherTag3";
-            this.aetherTag3.Size = new System.Drawing.Size(100, 15);
+            this.aetherTag3.Size = new System.Drawing.Size(75, 15);
             this.aetherTag3.TabIndex = 0;
             this.aetherTag3.Text = "First Name";
             this.aetherTag3.TextColor = System.Drawing.Color.White;
@@ -525,18 +492,18 @@
             // LoginForm
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1185, 608);
+            this.ClientSize = new System.Drawing.Size(889, 494);
             this.Controls.Add(this.aetherTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Attendance Tracker";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.aetherTabControl1.ResumeLayout(false);
             this.loginTabPage.ResumeLayout(false);

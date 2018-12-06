@@ -14,8 +14,14 @@ namespace attendance_tracker
 {
     public partial class adminForm : Form
     {
+        /// <summary>
+        /// Global Variables
+        /// </summary>
         private readonly string _connection = GetConnectionStrings();
         private string uID, activity;
+        /// <summary>
+        /// Admin form constructor
+        /// </summary>
         public adminForm()
         {
             InitializeComponent();
@@ -23,13 +29,17 @@ namespace attendance_tracker
             label2.Text = "Application Administrator";
             RefreshGrid();
         }
-
+        /// <summary>
+        /// Default connection string
+        /// </summary>
         static string GetConnectionStrings()
         {
             var settings = ConfigurationManager.ConnectionStrings["Connection"];
             return settings.ConnectionString;
         }
-
+        /// <summary>
+        /// Send data to the datagridview with professor and student information
+        /// </summary>
         private void RefreshGrid()
         {
             string query = "SELECT uL.user_id, uL.username, uL.password, p.first_name, p.last_name, p.email, uL.role, uL.active " +
@@ -84,7 +94,11 @@ namespace attendance_tracker
             aetherTextbox5.Enabled = false;
             aetherTextbox6.Enabled = true;
         }
-
+        /// <summary>
+        /// Updating the user information based on the radio button checked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aetherButton1_Click(object sender, EventArgs e)
         {
             string query;
@@ -165,7 +179,11 @@ namespace attendance_tracker
             RefreshGrid();
             MessageBox.Show("User updated");
         }
-
+        /// <summary>
+        /// Simulate a cell click from datagrid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
@@ -186,7 +204,11 @@ namespace attendance_tracker
 
             this.Refresh();
         }
-
+        /// <summary>
+        /// Simulate a cell click from datagrid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
@@ -257,7 +279,11 @@ namespace attendance_tracker
         {
 
         }
-
+        /// <summary>
+        /// Active or deactivate existing accounts based on status
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aetherButton2_Click(object sender, EventArgs e)
         {
             string query;

@@ -10,10 +10,17 @@ namespace attendance_tracker
 {
     public partial class StudentForm : Form
     {
+        /// <summary>
+        /// Global Vars
+        /// </summary>
         private static string _connection = null;
         private static string _userId = null;
         public static string StudentId { get; set; }
 
+        /// <summary>
+        /// Constructor for the student form
+        /// </summary>
+        /// <param name="userId"></param>
         public StudentForm(string userId)
         {
             InitializeComponent();
@@ -23,6 +30,9 @@ namespace attendance_tracker
             
         }
 
+        /// <summary>
+        /// Returns the student ID
+        /// </summary>
         private static void GetStudentId()
         {
             using (var con = new MySqlConnection(_connection))
@@ -40,6 +50,10 @@ namespace attendance_tracker
             }
         }
 
+        /// <summary>
+        /// Return default connection string
+        /// </summary>
+        /// <returns></returns>
         static string GetConnectionStrings()
         {
             var settings = ConfigurationManager.ConnectionStrings["Connection"];
@@ -51,6 +65,12 @@ namespace attendance_tracker
 
         }
 
+
+        /// <summary>
+        /// Initialize data on load
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void StudentForm_Load(object sender, EventArgs e)
         {
             pictureBox1.Image = Image.FromFile(@"default.png");
@@ -78,6 +98,10 @@ namespace attendance_tracker
             this.Text = @"Welcome " + label1.Text;
         }
 
+
+        /// <summary>
+        /// Returns all the information about a user
+        /// </summary>
         private void GetUserDetail()
         {
             if (_userId == null)
@@ -216,6 +240,12 @@ namespace attendance_tracker
             this.Show();
         }
 
+        /// <summary>
+        /// Show dialoge when user right clicks in the classes listbox
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="mousehit"></param>
+        /// <param name="uid"></param>
         private void ListboxItemRightClicked(LB.NormalListBoxItem item, MouseEventArgs mousehit, string uid)
         {
             var cmm = new ContextMenu();
@@ -233,6 +263,12 @@ namespace attendance_tracker
             item.ContextMenu = cmm;
         }
 
+        /// <summary>
+        /// Open up email form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <param name="uid"></param>
         private void Email_Click(LB.NormalListBoxItem sender, EventArgs e, string uid)
         {
             //MessageBox.Show(sender.TextTitle);
@@ -242,6 +278,11 @@ namespace attendance_tracker
             email.Show();
         }
 
+        /// <summary>
+        /// Double click on class in list for more stats
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="studentId"></param>
         private void ListboxItemDoubleClicked(LB.NormalListBoxItem item, string studentId)
         {
             //MessageBox.Show(item.TextTitle);
@@ -251,6 +292,11 @@ namespace attendance_tracker
             stats.Show();
         }
 
+        /// <summary>
+        /// Initialize everything on listbox load
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void listBoxEx1_Load(object sender, EventArgs e)
         {
             //get user classes

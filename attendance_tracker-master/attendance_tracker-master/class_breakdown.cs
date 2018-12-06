@@ -9,10 +9,17 @@ namespace attendance_tracker
 {
     public partial class class_breakdown : Form
     {
+        /// <summary>
+        /// Global Variables
+        /// </summary>
         private CustomListBox.NormalListBoxItem _s;
         public static string StudentId { get; set; }
         private static string _connection = null;
-
+        /// <summary>
+        /// Class breakdown constructor
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="studentId"></param>
         public class_breakdown(NormalListBoxItem item, string studentId)
         {
             InitializeComponent();
@@ -22,13 +29,17 @@ namespace attendance_tracker
             StudentId = studentId;
             GetData();
         }
-
+        /// <summary>
+        /// Default connection string
+        /// </summary>
         static string GetConnectionStrings()
         {
             var settings = ConfigurationManager.ConnectionStrings["Connection"];
             return settings.ConnectionString;
         }
-
+        /// <summary>
+        /// Get user class data based on student and class id
+        /// </summary>
         private void GetData()
         {
             using (var con = new MySqlConnection(_connection))

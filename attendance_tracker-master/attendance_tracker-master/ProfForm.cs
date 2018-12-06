@@ -13,6 +13,9 @@ namespace attendance_tracker
 {
     public partial class ProfForm : Form
     {
+        /// <summary>
+        /// Global Vars
+        /// </summary>
         private readonly string _connection = GetConnectionStrings();
         private readonly string _userId;
         private string _pId, _fN, _lN;
@@ -25,12 +28,21 @@ namespace attendance_tracker
         CheckBox[] chk;
         private string pFN, pLN, totClass;
 
+        /// <summary>
+        /// Returns the db connection string
+        /// </summary>
+        /// <returns></returns>
         static string GetConnectionStrings()
         {
             var settings = ConfigurationManager.ConnectionStrings["Connection"];
             return settings.ConnectionString;
         }
 
+        /// <summary>
+        /// Filter track attendance for students by ID
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aetherButton5_Click(object sender, EventArgs e)
         {
             string classID = aetherTextbox17.Text;
@@ -48,7 +60,7 @@ namespace attendance_tracker
                 chk[i].TabIndex = i;
                 chk[i].AutoSize = true;
                 chk[i].AutoCheck = true;
-                if(bounds < 363)
+                if (bounds < 363)
                     chk[i].Bounds = new Rectangle(x, padding + height, 40, 22);
                 else
                 {
@@ -63,6 +75,11 @@ namespace attendance_tracker
             label4.Text = classID;
         }
 
+        /// <summary>
+        /// Enroll Student
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aetherButton4_Click(object sender, EventArgs e)
         {
             string cName;
@@ -128,6 +145,11 @@ namespace attendance_tracker
         {
         }
 
+        /// <summary>
+        /// Drop student from a class
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aetherButton6_Click(object sender, EventArgs e)
         {
             string cID = aetherTextbox19.Text;
@@ -163,7 +185,12 @@ namespace attendance_tracker
             aetherTextbox14.Text = row.Cells["first_name"].Value.ToString();
             aetherTextbox15.Text = row.Cells["last_name"].Value.ToString();
         }
-        
+
+        /// <summary>
+        /// Load up data on cellgrid click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
@@ -179,6 +206,10 @@ namespace attendance_tracker
 
         }
 
+        /// <summary>
+        /// Initialize default values for ProfForm
+        /// </summary>
+        /// <param name="uId"></param>
         public ProfForm(string uId)
         {
             InitializeComponent();
@@ -197,6 +228,11 @@ namespace attendance_tracker
             GetAllStudentsEnrolledToProf();
         }
 
+        /// <summary>
+        /// Mark the student attendance in attendance tracking 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aetherButton7_Click(object sender, EventArgs e)
         {
             string cid = aetherTextbox17.Text;
@@ -268,9 +304,14 @@ namespace attendance_tracker
                 }
             }
             //MessageBox.Show("Attendance Marked");
-            label5.Text= "Attendance has" + Environment.NewLine + "been marked";
+            label5.Text = "Attendance has" + Environment.NewLine + "been marked";
         }
 
+        /// <summary>
+        /// Remove student attendance from attendance tracker
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aetherButton8_Click(object sender, EventArgs e)
         {
             string cID = label4.Text;
@@ -286,12 +327,17 @@ namespace attendance_tracker
                 comm.Parameters.AddWithValue("@Pid", _pId);
                 comm.Parameters.AddWithValue("@date", currDate);
                 comm.ExecuteNonQuery();
-                label5.Text = "Attendance for"+ Environment.NewLine+ "that date has" + Environment.NewLine + "been removed";
+                label5.Text = "Attendance for" + Environment.NewLine + "that date has" + Environment.NewLine + "been removed";
             }
             con.Close();
             //MessageBox.Show("Attendance removed");
         }
 
+        /// <summary>
+        /// Update attendance in attendance tracker
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aetherButton9_Click(object sender, EventArgs e)
         {
             string cid = aetherTextbox17.Text;
@@ -363,6 +409,11 @@ namespace attendance_tracker
 
         }
 
+        /// <summary>
+        /// Delete a class
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aetherButton1_Click(object sender, EventArgs e)
         {
             string cID = aetherTextbox10.Text;
@@ -375,19 +426,19 @@ namespace attendance_tracker
                 con.Open();
 
                 if (MessageBox.Show("Do you want to delete this class?", "Delete Class", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {     
+                {
                     string query = "DELETE FROM class WHERE class_id = '" + cID + "' and prof_id = '" + _pId + "'";
                     MySqlCommand comm = new MySqlCommand(query, con);
                     comm.ExecuteNonQuery();
                 }
- 
+
                 con.Close();
 
                 MessageBox.Show("Class Deleted");
             }
             else
                 MessageBox.Show("Class does not exist");
-            
+
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
@@ -420,6 +471,11 @@ namespace attendance_tracker
             }*/
         }
 
+        /// <summary>
+        /// Create a class
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aetherButton2_Click(object sender, EventArgs e)
         {
             _cId = aetherTextbox3.Text;
@@ -455,6 +511,9 @@ namespace attendance_tracker
             }
         }
 
+        /// <summary>
+        /// Get a list of all students that are being taught by the given instructor 
+        /// </summary>
         private void GetAllStudentsEnrolledToProf()
         {
             var totalStudents = 0;
@@ -521,7 +580,7 @@ namespace attendance_tracker
                         counter++;
                     }
 
-                    
+
                     float notHerePerc = (int)Math.Round((double)(100 * notHere) / counter);
                     if (notHerePerc < 0)
                         notHerePerc = 100;
@@ -574,6 +633,11 @@ namespace attendance_tracker
             aetherTextbox6.Text = row.Cells["email"].Value.ToString();
         }
 
+        /// <summary>
+        /// Email a student 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aetherButton3_Click_1(object sender, EventArgs e)
         {
 
@@ -601,9 +665,13 @@ namespace attendance_tracker
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
                 }
+                MessageBox.Show("Email Sent");
             }
         }
 
+        /// <summary>
+        /// Returns the professor ID
+        /// </summary>
         private void GetPid()
         {
             MySqlConnection con = new MySqlConnection(_connection);
@@ -614,6 +682,10 @@ namespace attendance_tracker
             comm.Parameters.AddWithValue("@Uid", _userId);
             _pId = comm.ExecuteScalar().ToString();
         }
+
+        /// <summary>
+        /// Reload data all set information in the cells
+        /// </summary>
         private void RefreshGrid()
         {
             try
@@ -629,7 +701,7 @@ namespace attendance_tracker
 
                 for (int i = 0; i < clonedDt.Columns.Count; i++)
                     clonedDt.Columns[i].DataType = typeof(string);
-                
+
 
 
                 for (int j = 0; j < dt.Rows.Count; j++)
@@ -658,7 +730,7 @@ namespace attendance_tracker
         {
             try
             {
-                string query = "SELECT first_name, last_name, email FROM student";
+                string query = "SELECT first_name, last_name, email FROM student s, studentclasses sc WHERE s.student_id = sc.student_id and sc.prof_id = '" + _pId + "'";
                 MySqlConnection con = new MySqlConnection(_connection);
                 con.Open();
                 var adapt = new MySqlDataAdapter(query, con);
@@ -694,6 +766,11 @@ namespace attendance_tracker
                 throw;
             }
         }
+
+        /// <summary>
+        /// Returns infromation about a given student
+        /// </summary>
+        /// <param name="cID"></param>
         private void getStudentInfo(string cID)
         {
             MySqlConnection con = new MySqlConnection(_connection);
@@ -723,6 +800,11 @@ namespace attendance_tracker
                 }
             }
         }
+
+        /// <summary>
+        /// Return information about a given class
+        /// </summary>
+        /// <param name="cID"></param>
         private void getClassInfo(string cID)
         {
             MySqlConnection con = new MySqlConnection(_connection);
@@ -740,6 +822,9 @@ namespace attendance_tracker
                 }
             }
         }
+        /// <summary>
+        /// Get the class ID
+        /// </summary>
         private void getClassIDs()
         {
             MySqlConnection con = new MySqlConnection(_connection);
@@ -757,6 +842,11 @@ namespace attendance_tracker
                 }
             }
         }
+
+        /// <summary>
+        /// Return information about the given professor
+        /// </summary>
+        /// <param name="uid"></param>
         private void profInfo(string uid)
         {
             MySqlConnection con = new MySqlConnection(_connection);
@@ -779,6 +869,10 @@ namespace attendance_tracker
 
             con.Close();
         }
+        /// <summary>
+        /// Return existing class
+        /// </summary>
+        /// <param name="Pid"></param>
         private void getExistingClass(string Pid)
         {
             MySqlConnection con = new MySqlConnection(_connection);

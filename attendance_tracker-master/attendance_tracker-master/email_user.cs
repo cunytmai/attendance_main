@@ -10,6 +10,9 @@ namespace attendance_tracker
 {
     public partial class email_user : Form
     {
+        /// <summary>
+        /// Global Variables
+        /// </summary>
         private static CustomListBox.NormalListBoxItem _s;
         private static string _connection = null;
         private static string _profName;
@@ -30,12 +33,17 @@ namespace attendance_tracker
             GetStudentName();
             this.Text = @"Emailing Instructor " + _profName.Split(' ')[0][0] + @" " + _profName.Split(' ')[1];
         }
+        /// <summary>
+        /// Default connection string
+        /// </summary>
         static string GetConnectionStrings()
         {
             var settings = ConfigurationManager.ConnectionStrings["Connection"];
             return settings.ConnectionString;
         }
-
+        /// <summary>
+        /// Get the specific professor name and id using class_id
+        /// </summary>
         private static void GetProfNameAndID()
         {
             using (var con = new MySqlConnection(_connection))
@@ -53,7 +61,9 @@ namespace attendance_tracker
                 con.Close();
             }
         }
-
+        /// <summary>
+        /// Get all the information from the student using student_id
+        /// </summary>
         private static void GetStudentName()
         {
             using (var con = new MySqlConnection(_connection))
@@ -71,7 +81,11 @@ namespace attendance_tracker
                 con.Close();
             }
         }
-
+        /// <summary>
+        /// Emailing the instructor for a specific class
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void aetherButton1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(aetherTextbox1.Text) || string.IsNullOrEmpty(aetherTextbox2.Text))
